@@ -3,7 +3,7 @@ Cura implementation of custom layer change G-code macro used in slicing ringing 
 Use the script with Post Processing Plugin on Cura Marketplace
 
 Copy .py file into your cura directory as follows:
-* (windows) C:\Users\<UserName>\AppData\Roaming\cura\5.X
+* (windows) C:\Users\<UserName>\AppData\Roaming\cura\5.x/scripts
 * (mac) Applications/Cura.app/Contents/Resources/plugins/plugins/PostProcessingPlugin/scripts/
 
 # Available settings
