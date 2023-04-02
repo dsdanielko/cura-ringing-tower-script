@@ -6,8 +6,7 @@ Copy .py file into your cura directory as follows:
 * (windows) C:\Users\<UserName>\AppData\Roaming\cura\5.X
 * (mac) Applications/Cura.app/Contents/Resources/plugins/plugins/PostProcessingPlugin/scripts/
 
-# cura-ringing-tower-script
-Settings to modify:
+# Available settings
 1. Start frequency
 2. End frequency
 3. Start layer
