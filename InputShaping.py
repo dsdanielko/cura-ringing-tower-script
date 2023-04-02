@@ -28,13 +28,6 @@ class InputShaping(Script):
                     'unit': 'Hz',
                     'type': 'int',
                     'default_value': 60
-                },
-                'start_l': {
-                    'label': 'Start layer',
-                    'description': 'Layer to start modifying frequency from',
-                    'unit': '',
-                    'type': 'int',
-                    'default_value': 2
                 }
             }
         })
@@ -49,7 +42,7 @@ class InputShaping(Script):
             for j, line in enumerate(lines):
                 if line.startswith(';LAYER:'):
                     layer = float(line.strip(';LAYER:'))
-                    hz = 0 if layer < start_layer else start_hz + end_hz * (layer - start_layer) / 297
+                    hz = 0 if layer < 2 else start_hz + (end_hz-start_hz) * (layer - 2) / 297
                     lines[j] += '\n;TYPE:INPUTSHAPING\nM593 F%f' % hz
             data[i] = '\n'.join(lines)
 
