@@ -9,4 +9,3 @@ Copy .py file into your cura directory as follows:
 # Available settings
 1. Start frequency
 2. End frequency
-3. Start layer
