@@ -50,9 +50,11 @@ class InputShaping(Script):
         for i, layer in enumerate(data):
             lines = layer.split('\n')
             for j, line in enumerate(lines):
-                if line.startswith(';LAYER:'):
+                if line.startswith(";LAYER_COUNT:"):
+                    max_layer = float(line.strip(';LAYER_COUNT:'))
+                elif line.startswith(';LAYER:'):
                     layer = float(line.strip(';LAYER:'))
-                    hz = 0 if layer < 2 else start_hz + (end_hz-start_hz) * (layer - 2) / 297
+                    hz = 0 if layer < 2 else start_hz + (end_hz-start_hz) * (layer - 2) / (max_layer-3)
                     if gc == 'ftm':
                         if layer == 0:
                             lines[j] += '\n;TYPE:INPUTSHAPING\nM493 S11 D0 ;Enable ZVD Input Shaping'
