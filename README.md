@@ -4,7 +4,7 @@ Use the script with Post Processing Plugin on Cura Marketplace.
 
 Copy .py file into your cura directory as follows:
 * (windows) C:\Users\\*username*\AppData\Roaming\cura\\*version*\scripts
-* (mac) Applications/Cura.app/Contents/Resources/plugins/plugins/PostProcessingPlugin/scripts/
+* (mac) /Users/*username*/Library/Application Support/cura/*version*/scripts
 
 # Available settings
 1. Motion planning type (M593 or M493)
